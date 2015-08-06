@@ -162,7 +162,7 @@
                           :class    => "selectpicker")
         :javascript
           miqInitSelectPicker();
-          miqSelectPickerEvent('authentication_user_type', "#{url}")
+          miqSelectPickerEvent('authentication_default_group_for_users', "#{url}")
     = hidden_div_if(!@edit[:new][:authentication][:ldap_role], :id => "ldap_role_details_div") do
       %form.form-horizontal
         .form-group#get_roles_now{:style => @edit[:new][:authentication][:user_proxies].blank? ? "display: none" : ""}
