@@ -82,12 +82,12 @@
                 #fqname_div{:style => @edit[:new][:fqname] != "" ? "" : "display:none"}
                   - alt_str = "Remove this Provisioning Entry Point"
                   = link_to(image_tag('/images/toolbars/discard.png', :class => "rollover small", :alt => _(alt_str)),
-                            {:action => 'ae_tree_select_discard', :typ => "provision"},
-                            "data-miq_sparkle_on" => true,
-                            "data-miq_sparkle_off" => true,
-                            "data-confirm" => _("Are you sure you want to remove this Provisioning Entry Point?"),
-                            :remote => true,
-                            :title => _("Remove this Provisioning Entry Point"))
+                              {:action => 'ae_tree_select_discard', :typ => "provision"},
+                              "data-miq_sparkle_on" => true,
+                              "data-miq_sparkle_off" => true,
+                              "data-confirm" => _("Are you sure you want to remove this Provisioning Entry Point?"),
+                              :remote => true,
+                              :title => _("Remove this Provisioning Entry Point"))
       - unless @edit[:new][:st_prov_type] == "generic_orchestration"
         .form-group
           %label.col-md-2.control-label{:title => _("Retirement Entry Point (NameSpace/Class/Instance)")}
